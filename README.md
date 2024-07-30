@@ -54,13 +54,13 @@ I have developed a robust notification service that allows an admin to update fl
 
    
 
-5. **Notifications:** After updating, concerned passengers receive immediate notifications about the changes to their flight. Only passengers that have the flight number that was updated by admin will receive these notifications.
+3. **Notifications:** After updating, concerned passengers receive immediate notifications about the changes to their flight. Only passengers that have the flight number that was updated by admin will receive these notifications.
 
- -![ss-3](https://github.com/user-attachments/assets/2af7cc4b-482c-48a1-926d-960f19cc522d)
+ ![ss-3](https://github.com/user-attachments/assets/2af7cc4b-482c-48a1-926d-960f19cc522d)
 
  
--When Flight is Cancelled
--![ss-4](https://github.com/user-attachments/assets/5c315a58-0290-4ea5-9a05-7334ca6046a5)
+**When Flight is Cancelled**
+ ![ss-4](https://github.com/user-attachments/assets/5c315a58-0290-4ea5-9a05-7334ca6046a5)
 
 
 
