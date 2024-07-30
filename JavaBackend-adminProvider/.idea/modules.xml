@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/adminProvider.iml" filepath="$PROJECT_DIR$/.idea/adminProvider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/JavaBackend-adminProvider.iml" filepath="$PROJECT_DIR$/.idea/JavaBackend-adminProvider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/adminProvider/adminProvider.iml" filepath="$PROJECT_DIR$/adminProvider/adminProvider.iml" />
     </modules>
   </component>
 </project>

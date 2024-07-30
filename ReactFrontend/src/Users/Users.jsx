@@ -12,6 +12,8 @@ import axios from "axios";
 import SockJS from "sockjs-client";
 import Stomp from "stompjs";
 
+import usericon from '../icons/user.svg'
+
 
 function Users() {
 
@@ -69,7 +71,11 @@ function Users() {
     <div className="pt-12 flex justify-center pb-12">
       <Card className="w-5/6 ">
         <CardHeader>
-          <Heading size="lg">Client Side</Heading>
+          <div className="flex gap-4">
+          <Heading size="xl">Users Side</Heading>
+          <img src={usericon} height={55} width={55} alt='user icon'></img>
+
+          </div>
         </CardHeader>
 
         <CardBody c>

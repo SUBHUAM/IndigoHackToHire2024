@@ -21,6 +21,7 @@ import {
 
 import { Field, Form, Formik } from "formik";
 import axios from "axios";
+import flight from "../icons/flight.png";
 
 function AdminPanel() {
   const [flightDetails, setFlightDetails] = useState();
@@ -36,7 +37,6 @@ function AdminPanel() {
       console.log(response);
 
       setFlightDetails(response.data);
-
     } catch (err) {
       console.log(err);
     }
@@ -52,21 +52,18 @@ function AdminPanel() {
       );
 
       setUpdate(true);
-
     } catch (err) {
       console.log(err);
     }
   };
 
-  useEffect(() => {
-    setFlightDetails(flightDetails);
-  }, [flightDetails]);
-
   return (
-    <div className="pt-12 flex justify-center">
+    <div className="pt-16 flex justify-center">
       <Card className="w-5/6 shadow-lg rounded-lg">
         <CardHeader>
-          <Heading size="lg">Admin Control</Heading>
+          <div className="flex">
+            <Heading size="xl">Admin Control</Heading>
+          </div>
         </CardHeader>
         <CardBody>
           <Stack divider={<StackDivider />} spacing="4">
@@ -119,104 +116,118 @@ function AdminPanel() {
                     updateStatus(values);
                     actions.setSubmitting(false);
                   }}
+                  enableReinitialize
                 >
                   {(props) => {
-                    
-                    return<Form className="gap-4">
-                      <div className="flex gap-4">
-                        <Field name="flightNo">
-                          {({ field, form }) => (
-                            <FormControl
-                              isInvalid={form.errors.name && form.touched.name}
-                            >
-                              <FormLabel>Flight No</FormLabel>
-                              <Input {...field} placeholder="name" disabled />
-                              <FormErrorMessage>
-                                {form.errors.name}
-                              </FormErrorMessage>
-                            </FormControl>
-                          )}
-                        </Field>
+                    return (
+                      <Form className="gap-4">
+                        <div className="flex gap-4">
+                          <Field name="flightNo">
+                            {({ field, form }) => (
+                              <FormControl
+                                isInvalid={
+                                  form.errors.name && form.touched.name
+                                }
+                              >
+                                <FormLabel>Flight No</FormLabel>
+                                <Input {...field} placeholder="name" disabled />
+                                <FormErrorMessage>
+                                  {form.errors.name}
+                                </FormErrorMessage>
+                              </FormControl>
+                            )}
+                          </Field>
 
-                        <Field name="origin">
-                          {({ field, form }) => (
-                            <FormControl
-                              isInvalid={form.errors.name && form.touched.name}
-                            >
-                              <FormLabel>Origin </FormLabel>
-                              <Input {...field} placeholder="name" />
-                              <FormErrorMessage>
-                                {form.errors.name}
-                              </FormErrorMessage>
-                            </FormControl>
-                          )}
-                        </Field>
+                          <Field name="origin">
+                            {({ field, form }) => (
+                              <FormControl
+                                isInvalid={
+                                  form.errors.name && form.touched.name
+                                }
+                              >
+                                <FormLabel>Origin </FormLabel>
+                                <Input {...field} placeholder="name" />
+                                <FormErrorMessage>
+                                  {form.errors.name}
+                                </FormErrorMessage>
+                              </FormControl>
+                            )}
+                          </Field>
 
-                        <Field name="destination">
-                          {({ field, form }) => (
-                            <FormControl
-                              isInvalid={form.errors.name && form.touched.name}
-                            >
-                              <FormLabel>Destination</FormLabel>
-                              <Input {...field} placeholder="name" />
-                              <FormErrorMessage>
-                                {form.errors.name}
-                              </FormErrorMessage>
-                            </FormControl>
-                          )}
-                        </Field>
+                          <Field name="destination">
+                            {({ field, form }) => (
+                              <FormControl
+                                isInvalid={
+                                  form.errors.name && form.touched.name
+                                }
+                              >
+                                <FormLabel>Destination</FormLabel>
+                                <Input {...field} placeholder="name" />
+                                <FormErrorMessage>
+                                  {form.errors.name}
+                                </FormErrorMessage>
+                              </FormControl>
+                            )}
+                          </Field>
 
-                        <Field name="departureDate">
-                          {({ field, form }) => (
-                            <FormControl
-                              isInvalid={form.errors.name && form.touched.name}
-                            >
-                              <FormLabel>Departure Date</FormLabel>
-                              <Input {...field} placeholder="name" />
-                              <FormErrorMessage>
-                                {form.errors.name}
-                              </FormErrorMessage>
-                            </FormControl>
-                          )}
-                        </Field>
+                          <Field name="departureDate">
+                            {({ field, form }) => (
+                              <FormControl
+                                isInvalid={
+                                  form.errors.name && form.touched.name
+                                }
+                              >
+                                <FormLabel>Departure Date</FormLabel>
+                                <Input {...field} placeholder="name" />
+                                <FormErrorMessage>
+                                  {form.errors.name}
+                                </FormErrorMessage>
+                              </FormControl>
+                            )}
+                          </Field>
 
-                        <Field name="gateNo">
-                          {({ field, form }) => (
-                            <FormControl
-                              isInvalid={form.errors.name && form.touched.name}
-                            >
-                              <FormLabel>Gate No</FormLabel>
-                              <Input {...field} placeholder="name" />
-                              <FormErrorMessage>
-                                {form.errors.name}
-                              </FormErrorMessage>
-                            </FormControl>
-                          )}
-                        </Field>
+                          <Field name="gateNo">
+                            {({ field, form }) => (
+                              <FormControl
+                                isInvalid={
+                                  form.errors.name && form.touched.name
+                                }
+                              >
+                                <FormLabel>Gate No</FormLabel>
+                                <Input {...field} placeholder="name" />
+                                <FormErrorMessage>
+                                  {form.errors.name}
+                                </FormErrorMessage>
+                              </FormControl>
+                            )}
+                          </Field>
 
-                        <Field name="cancellation">
-                          {({ field, form }) => (
-                            <FormControl
-                              isInvalid={form.errors.name && form.touched.name}
-                            >
-                              <FormLabel>Flight Cancelled</FormLabel>
-                              <Input {...field} placeholder="name" />
-                              <FormErrorMessage>
-                                {form.errors.name}
-                              </FormErrorMessage>
-                            </FormControl>
-                          )}
-                        </Field>
-                      </div>
-                      <Button
-                        mt={8}
-                        colorScheme="blue"
-                        isLoading={props.isSubmitting}
-                        type="submit"
-                      >
-                        Update
-                      </Button>
-                    </Form>
+                          <Field name="cancellation">
+                            {({ field, form }) => (
+                              <FormControl
+                                isInvalid={
+                                  form.errors.name && form.touched.name
+                                }
+                              >
+                                <FormLabel>Flight Cancelled</FormLabel>
+                                <Input {...field} placeholder="name" />
+                                <FormErrorMessage>
+                                  {form.errors.name}
+                                </FormErrorMessage>
+                              </FormControl>
+                            )}
+                          </Field>
+                        </div>
+                        <Button
+                          mt={8}
+                          colorScheme="blue"
+                          isLoading={props.isSubmitting}
+                          type="submit"
+                        >
+                          Update
+                        </Button>
+                      </Form>
+                    );
                   }}
                 </Formik>
               </Box>

@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/userConsumer.iml" filepath="$PROJECT_DIR$/.idea/userConsumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/JavaBackend-UserConsumer.iml" filepath="$PROJECT_DIR$/.idea/JavaBackend-UserConsumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/userConsumer/userConsumer.iml" filepath="$PROJECT_DIR$/userConsumer/userConsumer.iml" />
     </modules>
   </component>
 </project>

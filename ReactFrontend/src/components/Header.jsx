@@ -1,6 +1,6 @@
 import React from 'react'
 
-import indigoSvg from '../icons/indigo.png'
+import indigoSvg from '../icons/indigo.avif'
 import Clock from './Clock';
 
 function Header() {
@@ -10,7 +10,7 @@ function Header() {
     <div className='flex justify-center pt-6'>
     <div className=' w-2/3  bg-cyan-200 rounded-xl py-3 shadow-md'>
     <div className='flex px-6 justify-between items-center jus'>
-     <img src={indigoSvg} height={150} width={150} alt='indigo icon'></img>
+     <img src={indigoSvg} height={175} width={175} alt='indigo icon'></img>
      
      <div className=''><Clock/></div>
      </div>

@@ -7,6 +7,7 @@
     background-image: url('icons/cloud.png'); /* Adjust path based on image location */
     background-size: cover;
     background-position: center;
-    height: 160vh;
+    background-attachment: fixed;
+    height: 180vh;
     width: 98.9vw;
   }
