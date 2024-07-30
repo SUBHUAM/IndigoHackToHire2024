@@ -20,9 +20,7 @@ public class NotificationServiceImpl implements NotificationServiceUser {
     public void notificationService(ConsumerRecord<String,FlightDetailsDto>  flightDetailsDto){
 
         FlightDetailsDto flightDetailsDtonew=flightDetailsDto.value();
-        
         System.out.println(flightDetailsDtonew);
-
         template.convertAndSend("/topic/flight-updates",flightDetailsDtonew);
     }
 

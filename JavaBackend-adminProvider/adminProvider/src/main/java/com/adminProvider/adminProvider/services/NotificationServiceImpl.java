@@ -20,13 +20,11 @@ public class NotificationServiceImpl implements NotificationService {
     public String sendNotification(FlightDetailsDto flightDetailsDto) {
 
         try{
-
             FlightDetails flightDetails=flightRespository.findByFlightNo(flightDetailsDto.getFlightNo());
 
             if(flightDetails==null){
                 return null;
             }
-
             flightDetails.setFlightNo(flightDetails.getFlightNo());
             flightDetails.setOrigin(flightDetailsDto.getOrigin());
             flightDetails.setDestination(flightDetailsDto.getDestination());

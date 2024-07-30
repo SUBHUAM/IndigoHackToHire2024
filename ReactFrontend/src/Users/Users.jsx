@@ -66,7 +66,6 @@ function Users() {
        getAllBookingId();
      },[])
 
-
   return (
     <div className="pt-12 flex justify-center pb-12">
       <Card className="w-5/6 ">
