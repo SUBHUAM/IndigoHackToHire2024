@@ -12,17 +12,16 @@
 ## Technologies Used
 
 ### Frontend
+- React.js
+- - WebSocket
 - HTML
 - CSS
-- React.js
 - Tailwind CSS
 - Chakra UI
-- WebSocket
 
 ### Backend
 - Java
 - Spring Boot
-- Spring WebSocket
 
 ### Database
 - PostgreSQL
@@ -34,11 +33,11 @@
 
 ## Solution Description
 
-We have developed a robust notification service that allows an admin to update flight statuses in real-time. Here's how it works:
+I have developed a robust notification service that allows an admin to update flight statuses in real-time. Here's how it works:
 
 1. **Admin Panel:** The admin can search for a flight by entering the flight number in the search bar. All relevant details related to that flight will be displayed.
-2. **Update Flight Data:** The admin can update flight information such as gate number, departure time, or cancellation status.
-3. **Notifications:** After updating, concerned passengers receive immediate notifications about the changes to their flight. Only passengers with the specific flight number will receive these notifications.
+2. **Update Flight Data:** The admin can update flight information such as gate number, departure time, or cancellation status etc.
+3. **Notifications:** After updating, concerned passengers receive immediate notifications about the changes to their flight. Only passengers that have the flight number that was updated by admin will receive these notifications.
 4. **Data Storage:** All data is stored in the database for tracking and other purposes, ensuring a robust notification system.
 
 ## Internal Working
