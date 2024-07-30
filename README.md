@@ -49,24 +49,27 @@ I have developed a robust notification service that allows an admin to update fl
 
 2. **Update Flight Data:** The admin can update flight information such as gate number, departure time, or cancellation status etc.
    
-   -![ss-2](https://github.com/user-attachments/assets/d3b48845-5456-4536-af68-41349b062c74)
+   ![ss-2](https://github.com/user-attachments/assets/d3b48845-5456-4536-af68-41349b062c74)
 
 
    
 
 3. **Notifications:** After updating, concerned passengers receive immediate notifications about the changes to their flight. Only passengers that have the flight number that was updated by admin will receive these notifications.
 
- ![ss-3](https://github.com/user-attachments/assets/2af7cc4b-482c-48a1-926d-960f19cc522d)
+  ![ss-3](https://github.com/user-attachments/assets/2af7cc4b-482c-48a1-926d-960f19cc522d)
 
  
 **When Flight is Cancelled**
+
+ 
  ![ss-4](https://github.com/user-attachments/assets/5c315a58-0290-4ea5-9a05-7334ca6046a5)
 
 
 
 4. **Data Storage:** All data is stored in the database for tracking and other purposes, ensuring a robust notification system.
 
--![ss-3](https://github.com/user-attachments/assets/ebac130e-2168-4d74-9601-7d61fb3f77f0)
+ 
+ ![ss-3](https://github.com/user-attachments/assets/ebac130e-2168-4d74-9601-7d61fb3f77f0)
 
 
 
