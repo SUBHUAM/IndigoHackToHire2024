@@ -5,15 +5,19 @@
 ## Problem Statement
 **Flight Status and Notifications:** Develop a system to provide real-time flight status updates and notifications to passengers.
 
+
 ## Demo Video
 
-[Watch the demo video](#)
+
+https://github.com/user-attachments/assets/caba3464-e60c-4a33-b3e0-12d9c4eb3cec
+
+
 
 ## Technologies Used
 
 ### Frontend
 - React.js
-- - WebSocket
+- WebSocket
 - HTML
 - CSS
 - Tailwind CSS
