@@ -40,9 +40,21 @@ https://github.com/user-attachments/assets/caba3464-e60c-4a33-b3e0-12d9c4eb3cec
 I have developed a robust notification service that allows an admin to update flight statuses in real-time. Here's how it works:
 
 1. **Admin Panel:** The admin can search for a flight by entering the flight number in the search bar. All relevant details related to that flight will be displayed.
+
+   ![ss-4](https://github.com/user-attachments/assets/ceede53e-2e86-4f43-a179-0c6ebf1d6ee4)
+
+
 2. **Update Flight Data:** The admin can update flight information such as gate number, departure time, or cancellation status etc.
+   
+   ![ss-1](https://github.com/user-attachments/assets/8e6c806d-7c06-4000-a0e7-de554679d68e)
+
 3. **Notifications:** After updating, concerned passengers receive immediate notifications about the changes to their flight. Only passengers that have the flight number that was updated by admin will receive these notifications.
+
+![ss-2](https://github.com/user-attachments/assets/fe00081c-1646-46e4-b180-d4fcef746519)
+
 4. **Data Storage:** All data is stored in the database for tracking and other purposes, ensuring a robust notification system.
+
+![ss-3](https://github.com/user-attachments/assets/ebac130e-2168-4d74-9601-7d61fb3f77f0)
 
 ## Internal Working
 
@@ -82,3 +94,8 @@ Critical statements are wrapped in try-catch blocks in both frontend and backend
 - **Admin Console:** Provides real-time updates quickly to users about flight status.
 - **Smooth and Interactive UI:** Ensures a user-friendly experience.
 
+
+## Contacts
+
+- **Email:** subhuamtangar@gmail.com
+- **LinkedIn:** https://www.linkedin.com/in/subhuam-tangar-3934871aa/
