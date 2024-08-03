@@ -9,7 +9,8 @@
 ## Demo Video
 
 
-https://github.com/user-attachments/assets/caba3464-e60c-4a33-b3e0-12d9c4eb3cec
+
+https://github.com/user-attachments/assets/163a1df1-79af-4cf8-871e-0ce6235d0d3c
 
 
 
@@ -41,28 +42,34 @@ I have developed a robust notification service that allows an admin to update fl
 
 1. **Admin Panel:** The admin can search for a flight by entering the flight number in the search bar. All relevant details related to that flight will be displayed.
 
-   ![ss-4](https://github.com/user-attachments/assets/ceede53e-2e86-4f43-a179-0c6ebf1d6ee4)
+
+   ![ss-1](https://github.com/user-attachments/assets/eedbc8c2-d9af-42f0-85ad-8236c0315466)
+
+
+
+2. **Update Flight Data:** The admin can update flight information such as gate number, departure time, or cancellation status etc.
+   
+   ![ss-2](https://github.com/user-attachments/assets/d3b48845-5456-4536-af68-41349b062c74)
+
 
    
 
+3. **Notifications:** After updating, concerned passengers receive immediate notifications about the changes to their flight. Only passengers that have the flight number that was updated by admin will receive these notifications.
 
-3. **Update Flight Data:** The admin can update flight information such as gate number, departure time, or cancellation status etc.
-   
-   ![ss-1](https://github.com/user-attachments/assets/8e6c806d-7c06-4000-a0e7-de554679d68e)
+  ![ss-3](https://github.com/user-attachments/assets/2af7cc4b-482c-48a1-926d-960f19cc522d)
 
+ 
+**When Flight is Cancelled**
 
-   
-
-5. **Notifications:** After updating, concerned passengers receive immediate notifications about the changes to their flight. Only passengers that have the flight number that was updated by admin will receive these notifications.
-
-![ss-2](https://github.com/user-attachments/assets/fe00081c-1646-46e4-b180-d4fcef746519)
-
+ 
+ ![ss-4](https://github.com/user-attachments/assets/5c315a58-0290-4ea5-9a05-7334ca6046a5)
 
 
 
 4. **Data Storage:** All data is stored in the database for tracking and other purposes, ensuring a robust notification system.
 
-![ss-3](https://github.com/user-attachments/assets/ebac130e-2168-4d74-9601-7d61fb3f77f0)
+ 
+ ![ss-3](https://github.com/user-attachments/assets/ebac130e-2168-4d74-9601-7d61fb3f77f0)
 
 
 
