@@ -67,7 +67,7 @@ function Users() {
      },[])
 
   return (
-    <div className="pt-12 flex justify-center pb-12">
+    <div className=" flex justify-center pb-12 background">
       <Card className="w-5/6 ">
         <CardHeader>
           <div className="flex gap-4">

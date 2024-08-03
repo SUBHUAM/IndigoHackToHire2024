@@ -30,6 +30,7 @@ function AdminPanel() {
 
   const handleSubmit = async (values) => {
     try {
+      setUpdate(false);
       const response = await axios.get(
         `http://localhost:8080/flightDetails/${values.flightNo}`
       );
@@ -60,14 +61,14 @@ function AdminPanel() {
   return (
     <div className="pt-16 flex justify-center">
       <Card className="w-5/6 shadow-lg rounded-lg">
-        <CardHeader>
-          <div className="flex">
-            <Heading size="xl">Admin Control</Heading>
+        <CardHeader className="bg-blue-400">
+          <div className="flex " >
+            <Heading size="xl" className="text-white">Admin Control</Heading>
           </div>
         </CardHeader>
-        <CardBody>
+        <CardBody >
           <Stack divider={<StackDivider />} spacing="4">
-            <Heading size="md">Update Flight Status</Heading>
+            <Heading size="md" className="pt-6">Update Flight Status</Heading>
             <Box className="w-1/4">
               <Formik
                 initialValues={{ flightNo: "" }}

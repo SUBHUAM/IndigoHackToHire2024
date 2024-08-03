@@ -9,7 +9,7 @@ function IndigoMain() {
     <div>
     <Header />
     <AdminPanel/>
-    <div className='flex justify-center pt-4'>
+    <div className='flex justify-center pt-16'>
     <img src={flight} height={135} width={135} alt="indigo icon"></img>
     </div>
     <Users/>
