@@ -1,119 +1,188 @@
-# IndigoHackToHire2024
+#Odoo-x-CGC-QuickDesk (QuickDesk)
+Problem Statement
+QuickDesk is designed to provide a simple, easy-to-use help desk solution where users can raise support tickets, and support staff can manage and resolve them efficiently. The system aims to streamline communication between users and support teams without unnecessary complexity.
 
-# Flight Status and Notifications
+Demo Video
+[Add your demo video here]
 
-## Problem Statement
-**Flight Status and Notifications:** Develop a system to provide real-time flight status updates and notifications to passengers.
+Technologies Used
+Frontend
+Next.js
 
+Tailwind CSS
 
-## Demo Video
+React Components
 
+Form Validation
 
+Real-time Notifications
 
-https://github.com/user-attachments/assets/163a1df1-79af-4cf8-871e-0ce6235d0d3c
+Backend
+Spring Boot
 
+Spring Security
 
+Spring Data JPA
 
-## Technologies Used
+SLF4J Logging
 
-### Frontend
-- React.js
-- WebSocket
-- HTML
-- CSS
-- Tailwind CSS
-- Chakra UI
+Mail Service
 
-### Backend
-- Java
-- Spring Boot
+OWASP HTML Sanitizer
 
-### Database
-- PostgreSQL
+Database
+PostgreSQL
 
-### Notifications
-- Kafka
+JPA/Hibernate
 
-*Note: All coding standards and conventions have been followed to maintain high readability and refactorability.*
+📋 Team
+The Watcher - Project Oversight
 
-## Solution Description
+Subhum Tangar - Team Lead
 
-I have developed a robust notification service that allows an admin to update flight statuses in real-time. Here's how it works:
+Ayush Agarwal - Developer
 
-1. **Admin Panel:** The admin can search for a flight by entering the flight number in the search bar. All relevant details related to that flight will be displayed.
+Core Dependencies (Maven)
+xml
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-data-jpa</artifactId>
+</dependency>
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-security</artifactId>
+</dependency>
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-validation</artifactId>
+</dependency>
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-web</artifactId>
+</dependency>
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-mail</artifactId>
+</dependency>
+<dependency>
+  <groupId>org.postgresql</groupId>
+  <artifactId>postgresql</artifactId>
+  <scope>runtime</scope>
+</dependency>
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-test</artifactId>
+  <scope>test</scope>
+</dependency>
+<dependency>
+  <groupId>org.springframework.security</groupId>
+  <artifactId>spring-security-test</artifactId>
+  <scope>test</scope>
+</dependency>
+<dependency>
+  <groupId>org.projectlombok</groupId>
+  <artifactId>lombok</artifactId>
+  <optional>true</optional>
+</dependency>
+<dependency>
+  <groupId>com.googlecode.owasp-java-html-sanitizer</groupId>
+  <artifactId>owasp-java-html-sanitizer</artifactId>
+  <version>20220608.1</version>
+</dependency>
+✨ Key Features & Achievements
+1. Full-Stack Authentication & Authorization
+User Login & Registration: Secure signup, login, password hashing and reset flows
 
+Role-Based Access Control: Users are assigned roles (USER, AGENT, ADMIN) with appropriate permissions
 
-   ![ss-1](https://github.com/user-attachments/assets/eedbc8c2-d9af-42f0-85ad-8236c0315466)
+XSRF/CSRF Protection: Automatic CSRF token generation and validation in every form submission
 
+CORS Handling: Configured CORS policy to allow frontend origin and restrict unwanted requests
 
+Security Hardening: Spring Security configurations for session management, password policies, and endpoint protection
 
-2. **Update Flight Data:** The admin can update flight information such as gate number, departure time, or cancellation status etc.
-   
-   ![ss-2](https://github.com/user-attachments/assets/d3b48845-5456-4536-af68-41349b062c74)
+2. Ticket Management
+Create & Track Tickets: Users can open new tickets by specifying subject, category, and description
 
+Agent Dashboard: Support staff can view assigned tickets, update status (OPEN, IN_PROGRESS, RESOLVED), and add comments
 
-   
+Email Notifications: Automated email alerts to ticket creator and assigned agents on status changes and new comments
 
-3. **Notifications:** After updating, concerned passengers receive immediate notifications about the changes to their flight. Only passengers that have the flight number that was updated by admin will receive these notifications.
+Persistence Layer: JPA entities for Users, Tickets, Comments with PostgreSQL as the data store
 
-  ![ss-3](https://github.com/user-attachments/assets/2af7cc4b-482c-48a1-926d-960f19cc522d)
-
- 
-**When Flight is Cancelled**
-
- 
- ![ss-4](https://github.com/user-attachments/assets/5c315a58-0290-4ea5-9a05-7334ca6046a5)
-
-
-
-4. **Data Storage:** All data is stored in the database for tracking and other purposes, ensuring a robust notification system.
-
- 
- ![ss-3](https://github.com/user-attachments/assets/ebac130e-2168-4d74-9601-7d61fb3f77f0)
-
-
-
-
-## Internal Working
-
-### Backend
-
-The backend is powered by Spring Boot, divided into two main services: **AdminProvider** and **UserConsumer**.
-
-#### AdminProvider Service
-
-- **Kafka Integration:** Handles the creation of topics in the Kafka server, configuring topics with partition and replication factors, and sending notification messages.
-- **APIs:** Includes three APIs for fetching booking details, flight details, and all booking IDs. It uses Spring JDBC and PostgreSQL for data retrieval and storage.
-
-#### UserConsumer Service
-
-- **Message Handling:** Receives notification messages from the provider, deserializes them, and listens to specific notification topics using the `@KafkaListener` annotation.
-- **WebSocket Communication:** Sends messages to the WebSocket controller to establish continuous communication between the server and users.
-
-### Frontend
-
-- **Single Page Application:** Developed using React.js, HTML, CSS, Tailwind CSS, and Chakra UI.
-- **Admin Panel:** Allows the admin to search for flights by flight number and update flight details (e.g., gate number, departure time). When updates are made, an API call is sent to the AdminProvider service, which then notifies the UserConsumer service.
-- **User Interface:** Includes three dummy users to demonstrate real-time notifications. When changes are made, users receive notifications about updates related to their flights, such as gate changes or delays.
-- **Continuous WebSocket Connection:** Ensures users receive real-time notifications.
-
-### Database
-
-- **PostgreSQL:** Used to store flight data. The database setup mimics a production environment to achieve accurate results.
-
-### Error Handling
-
-Critical statements are wrapped in try-catch blocks in both frontend and backend code to prevent service interruptions.
-
-## Achieved Features
-
-- **Real-time Updates:** Displays current flight status (delays, cancellations, gate changes).
-- **Push Notifications:** Sends notifications for flight status changes via app notifications.
-- **Admin Console:** Provides real-time updates quickly to users about flight status.
-- **Smooth and Interactive UI:** Ensures a user-friendly experience.
+Dashboard with filters, search, pagination, sorting.
 
 
-## Contacts
+Category management 
 
-- **Email:** subhuamtangar@gmail.com
-- **LinkedIn:** https://www.linkedin.com/in/subhuam-tangar-3934871aa/
+3. UI/UX & Frontend
+Modern Interface: Built with Next.js & Tailwind CSS for responsive and intuitive layouts
+
+Component Library: Reusable form components, modals, and navigation elements
+
+Form Validation: Client-side validation matching backend rules ensures data integrity
+
+Real-Time Feedback: Loading spinners and toast notifications for in-app actions
+
+4. Logging & Monitoring
+SLF4J Logging: Structured logs at INFO and DEBUG levels for user actions, errors, and system events
+
+Error Handling: Global exception handlers return standardized API responses and log stack traces
+
+🚀 Getting Started
+Prerequisites
+Java 17+
+
+Node.js 18+
+
+PostgreSQL 12+
+
+Maven 3.6+
+
+Installation
+Clone the repository:
+
+bash
+git clone https://github.com/your-org/Odoo-x-CGC-QuickDesk.git
+cd Odoo-x-CGC-QuickDesk
+Configure the Database:
+Create a PostgreSQL database (e.g., quickdesk_db) and update application.properties:
+
+text
+spring.datasource.url=jdbc:postgresql://localhost:5432/quickdesk_db
+spring.datasource.username=your_username
+spring.datasource.password=your_password
+Run the Backend:
+
+bash
+./mvnw spring-boot:run
+Run the Frontend:
+
+bash
+cd frontend
+npm install
+npm run dev
+Access the App
+Frontend: http://localhost:3000
+
+Backend API: http://localhost:8080
+
+
+Contributing
+Fork the repository
+
+Create your feature branch (git checkout -b feature/AmazingFeature)
+
+Commit your changes (git commit -m 'Add some AmazingFeature')
+
+Push to the branch (git push origin feature/AmazingFeature)
+
+Open a Pull Request
+
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+🙏 Acknowledgements
+Thanks to the entire QuickDesk team—The Watcher, Subhum Tangar, and Ayush Agarwal—for the collaborative effort in building a secure, user-friendly helpdesk solution.
+
+Made with ❤️ by Team QuickDesk
